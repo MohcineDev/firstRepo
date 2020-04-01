@@ -32,13 +32,13 @@ p {
     border-radius: 10px;
 }
 
-input[type=email], input[type=password], input[type=submit] {
+input[type=email], input[type=password], input[type=submit], input[type=text] {
     border: 1px solid var(--col);
     border-radius: 5px;
     outline: none;
 }
 
-input[type=email], input[type=password] {
+input[type=email], input[type=password], input[type=text] {
     width: 175px;
     padding: 8px 10px;
     font-size: 0.9em;
@@ -63,7 +63,7 @@ input[type=submit]:hover {
 }
 
 a {
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: none;
     color: rgb(95, 216, 229);
 }
