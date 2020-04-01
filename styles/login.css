@@ -1,0 +1,65 @@
+body {
+    background-color: #313131;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #313131;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0 0 15px;
+}
+
+.loginForm {
+    background-color: rgb(196, 255, 244);
+    padding: 10px;
+}
+
+input[type=email], input[type=password], input[type=submit] {
+    border: 1px solid rgb(69, 147, 165);
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type=email], input[type=password] {
+    width: 135px;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    margin: 5px;
+}
+
+input[type=submit] {
+    width: 100%;
+    padding: 5px 0px;
+    color: #313131;
+    font-size: 1.5em;
+    margin: 10px 0;
+    background-color: rgb(126, 243, 189);
+}
+
+input[type=submit]:hover {
+    background-color: rgb(82, 209, 150);
+    color: #0f0e0e;
+    cursor: pointer;
+}
+
+a {
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(10, 58, 155);
+}
+a:hover {
+    color: rgb(62, 105, 235);
+}
