@@ -1,10 +1,11 @@
-*{
-    --col: #ddd;
+* {
+    --col: #abd;
 }
+
 body {
     background-color: #313131;
     font-family: Arial, Helvetica, sans-serif;
-color: var(--col);
+    color: var(--col);
 }
 
 label {
@@ -27,7 +28,7 @@ p {
 
 .loginForm {
     background-color: #212121;
-    padding: 30px 40px;
+    padding: 30px 20px;
     box-shadow: 0px 0px 8px #555;
     border-radius: 10px;
 }
@@ -36,14 +37,49 @@ input[type=email], input[type=password], input[type=submit], input[type=text] {
     border: 1px solid var(--col);
     border-radius: 5px;
     outline: none;
+    margin: 10px 0;
+}
+
+.username, .email, .pass, .pass0 {
+    margin: 10px 0;
+    position: relative;
+}
+
+.username p, .email p, .pass p, .pass0 p {
+    font-size: 14px;
+    margin: 0;
+    visibility: hidden;
+    text-align: left;
+    margin-left: 95px;
+    position: absolute;
+    top: 40px;
+    background-color: crimson;
+    padding: 4px;
+    border-radius: 5px;
+    transition: background-color 1s;
+}
+
+.username p::before, .email p::before, .pass p::before, .pass0 p::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: crimson;
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    transform: rotate(45deg);
+}
+
+.err {
+    visibility: visible !important;
+    color: #fde8c0;
 }
 
 input[type=email], input[type=password], input[type=text] {
-    width: 175px;
+    width: 200px;
     padding: 8px 10px;
     font-size: 0.9em;
     background-color: #313131;
-    margin: 8px 0;
     color: var(--col);
 }
 

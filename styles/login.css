@@ -1,12 +1,14 @@
-*{
+* {
     --col: #ddd;
 }
-body {
-    background-color: #313131;
-    font-family: Arial, Helvetica, sans-serif;
-color: var(--col);
-}
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--col);
+    /* background-image: url("/bg.svg"); */
+    background-color: #313131;
+}
+ 
 label {
     display: inline-block;
     width: 90px;
@@ -38,12 +40,28 @@ input[type=email], input[type=password], input[type=submit] {
     outline: none;
 }
 
+.email, .pass {
+    margin: 10px 0;
+}
+
+.email p, .pass p {
+    font-size: 14px;
+    margin: 0;
+    visibility: hidden;
+    text-align: left;
+    margin-left: 95px;
+}
+
+.err {
+    visibility: visible !important;
+    color: #fb3a3a;
+}
+
 input[type=email], input[type=password] {
     width: 175px;
     padding: 8px 10px;
     font-size: 0.9em;
     background-color: #313131;
-    margin: 8px 0;
     color: var(--col);
 }
 
@@ -52,7 +70,7 @@ input[type=submit] {
     padding: 5px 0px;
     color: #313131;
     font-size: 1.5em;
-    margin: 10px 0;
+    margin: 5px 0 10px;
     background-color: rgb(95, 216, 229);
 }
 
