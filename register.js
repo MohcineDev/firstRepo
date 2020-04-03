@@ -44,6 +44,11 @@ usernameCheck = (inputValue) => {
         username.children[2].classList.add('err')
         return false
     }
+    else if (inputValue.length < 6) {
+        username.children[2].textContent = 'must be at least 6 characters'
+        username.children[2].classList.add('err')
+        return false
+    }
     else {
         username.children[2].classList.remove('err')
         return true
@@ -105,6 +110,8 @@ confirmCheck = (inputValue) => {
 
 function setMessage(message) {
     document.getElementById('messagetag').textContent = message
+    document.getElementById('messagetag').style.visibility='visible'
+
     // pass.children[2].textContent = message
     // messageTag.value = message;
 }
