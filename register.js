@@ -110,7 +110,7 @@ confirmCheck = (inputValue) => {
 
 function setMessage(message) {
     document.getElementById('messagetag').textContent = message
-    document.getElementById('messagetag').style.visibility='visible'
+    document.getElementById('messagetag').style.visibility = 'visible'
 
     // pass.children[2].textContent = message
     // messageTag.value = message;
@@ -147,3 +147,24 @@ function submitHandler() {
         )
     console.log("clicked..")
 }
+
+
+//----dark light
+document.body.classList.add(localStorage.getItem('classList'))
+const dark = document.querySelector('#dark')
+
+dark.addEventListener('click', () => {
+
+    if (localStorage.getItem('classList')=='light') {
+        document.body.classList.add('dark')
+        localStorage.setItem('classList', 'dark')
+    }
+    else{
+        document.body.classList.remove('dark')
+        localStorage.setItem('classList', 'light')
+    }
+    
+    //or just use this easy but without reload
+    // document.body.classList.toggle('dark')
+
+})

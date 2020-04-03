@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/forgot.css">
-  
+    <script src="forgot.js" defer></script>
     <title>Forgot Password</title>
 </head>
+
 <body>
     <nav>
 
@@ -19,7 +21,7 @@
         <div class="extra">
             <a href="login.html">SignIn</a>
             <a href="register.html">SignUp</a>
-            <svg height="470pt" viewBox="0 0 470 470" width="470pt" xmlns="http://www.w3.org/2000/svg">
+            <svg id="dark" height="470pt" viewBox="0 0 470 470" width="470pt" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="m235 104.605469c-72.015625 0-130.394531 58.378906-130.394531 130.394531s58.378906 130.394531 130.394531 130.394531 130.394531-58.378906 130.394531-130.394531c-.082031-71.980469-58.414062-130.3125-130.394531-130.394531zm0 240.789062c-60.96875 0-110.394531-49.425781-110.394531-110.394531s49.425781-110.394531 110.394531-110.394531 110.394531 49.425781 110.394531 110.394531c-.070312 60.941406-49.453125 110.324219-110.394531 110.394531zm0 0" />
                 <path
@@ -38,7 +40,7 @@
                     d="m365.257812 351.117188c-2.519531-2.542969-6.210937-3.546876-9.675781-2.625-3.460937.925781-6.164062 3.628906-7.089843 7.089843-.921876 3.464844.082031 7.15625 2.625 9.675781l35.472656 35.472657c3.910156 3.878906 10.21875 3.863281 14.109375-.03125 3.894531-3.890625 3.910156-10.199219.03125-14.109375zm0 0" />
                 <path
                     d="m104.742188 118.882812c2.519531 2.542969 6.210937 3.546876 9.675781 2.625 3.460937-.925781 6.164062-3.628906 7.089843-7.089843.921876-3.464844-.082031-7.15625-2.625-9.675781l-35.472656-35.472657c-3.910156-3.878906-10.21875-3.863281-14.109375.03125-3.894531 3.890625-3.910156 10.199219-.03125 14.109375zm0 0" />
-                </svg>
+            </svg>
         </div>
 
     </nav>
@@ -46,10 +48,14 @@
         <div class="Form">
 
             <p>Recover Password</p>
-            <form action="">
-                <label for="email">Your Email : </label>
-                <input type="email" name="" id="email"><br>
+            <form   id="form" action="">
+                <div class="email">
+                    <label for="email">Your Email : </label>
+                    <input type="email" name="" id="email">
+                    <p>1</p>
+                </div>
                 <input type="submit" value="Send To Email">
+
                 <a href="login.html">Login</a> <br>
                 <a href="register.html">Register</a>
 
@@ -58,4 +64,5 @@
     </div>
 
 </body>
+
 </html>
