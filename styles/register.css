@@ -9,7 +9,9 @@ body {
     color: var(--col);
     margin: 0;
 }
-
+.dark{
+    background-color: #dff4f6;
+}
 /* ------- Nav Bar------------ */
 
 nav {
@@ -31,11 +33,15 @@ nav svg {
     width: 25px;
     height: 25px;
     margin: 0 5px 0 5px;
+    cursor: pointer;
     line-height: 40px;
 }
 
 svg path {
     fill: rgb(255, 249, 217);
+}
+svg:hover path {
+    fill: var(--link);
 }
 
 .menu {
@@ -108,7 +114,6 @@ input[type=email], input[type=password], input[type=submit], input[type=text] {
     background-color: crimson;
     padding: 4px;
     border-radius: 5px;
-    transition: background-color 1s;
 }
 
 .username p::before, .email p::before, .pass p::before, .pass0 p::before {
@@ -144,9 +149,9 @@ input[type=email], input[type=password], input[type=text] {
 
 input[type=submit] {
     width: 100%;
-    padding: 5px 0px;
+    padding: 8px 0px;
     color: #313131;
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 10px 0;
     background-color: rgb(95, 216, 229);
 }
