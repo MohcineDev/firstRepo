@@ -101,9 +101,8 @@ function submitHandler() {
     const confirmpassword = document.getElementById('confirmpassword');
 
     event.preventDefault();
-    // axios.post("https://dashboard.heroku.com/apps/yourjourneydocumented/register")
     // axios.post("http://localhost:5000/register",
-    axios.post("https://dashboard.heroku.com/apps/yourjourneydocumented/register",
+    axios.post("https://yourjourneydocumented.herokuapp.com/register",
     {
         username: username.value,
         email: email.value,
