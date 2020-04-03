@@ -1,4 +1,5 @@
 * {
+    --link: rgb(95, 178, 229);
     --col: #ddd;
 }
 
@@ -7,8 +8,59 @@ body {
     color: var(--col);
     /* background-image: url("/bg.svg"); */
     background-color: #313131;
+    margin: 0;
 }
- 
+
+/* ------- Nav Bar------------ */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #212121;
+    height: 40px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--link);
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+nav svg {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px 0 5px;
+    line-height: 40px;
+}
+
+svg path {
+    fill: rgb(255, 249, 217);
+}
+
+.menu {
+    margin-left: 30px;
+}
+
+.logo {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.extra {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.extra>a {
+    border: 1px solid rgb(56, 93, 109);
+    border-radius: 0 8px 0;
+}
+
+/* ------------------*/
+
 label {
     display: inline-block;
     width: 90px;
@@ -80,12 +132,12 @@ input[type=submit]:hover {
     cursor: pointer;
 }
 
-a {
-    font-size: 12px;
-    text-decoration: none;
-    color: rgb(95, 216, 229);
+form a {
+    font-size: 14px;
+    text-decoration: none;  
+    color: var(--link)
 }
 
 a:hover {
-    color: rgb(95, 178, 229);
+    color: rgb(35, 215, 224);
 }
