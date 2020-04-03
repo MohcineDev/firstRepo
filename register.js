@@ -21,7 +21,7 @@ function inputValidation() {
     passwordCheck(passInput)
     confirmCheck(pass0Input)
 }
-
+    
 //--- username 
 
 usernameCheck = (inputValue) => {
