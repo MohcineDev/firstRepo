@@ -15,15 +15,19 @@ function inputValidation() {
     let emailInput = email.children[1].value
     let passInput = pass.children[1].value
     let pass0Input = pass0.children[1].value
-
     usernameCheck(usernameInput)
     emailCheck(emailInput)
     passwordCheck(passInput)
     confirmCheck(pass0Input)
-}
-    
-//--- username 
 
+    if (usernameCheck(usernameInput) && emailCheck(emailInput) && passwordCheck(passInput) && confirmCheck(pass0Input)) {
+        submitHandler()
+    }
+    // usernameCheck(usernameInput)
+
+}
+
+//--- username 
 usernameCheck = (inputValue) => {
 
     let space = false
@@ -38,20 +42,25 @@ usernameCheck = (inputValue) => {
     if (inputValue === '' || space) {
         username.children[2].textContent = 'enter a username'
         username.children[2].classList.add('err')
+        return false
     }
-    else
+    else {
         username.children[2].classList.remove('err')
+        return true
+    }
 }
 
-
 //--- email //still
-emailCheck =(inputValue)=>{
+emailCheck = (inputValue) => {
     if (inputValue === '') {
         email.children[2].textContent = 'enter something here'
         email.children[2].classList.add('err')
+        return false
     }
-    else
+    else {
         email.children[2].classList.remove('err')
+        return true
+    }
 
 }
 //--- password 
@@ -59,36 +68,42 @@ passwordCheck = (inputValue) => {
     if (inputValue === '') {
         pass.children[2].textContent = 'enter a password'
         pass.children[2].classList.add('err')
+        return false
     }
     else if (inputValue.length < 8) {
         pass.children[2].textContent = 'password must be greather than 7'
         pass.children[2].classList.add('err')
+        return false
     }
-    else
+    else {
         pass.children[2].classList.remove('err')
+        return true
+    }
 }
 
 //--- password Confirmation
-
 confirmCheck = (inputValue) => {
     if (inputValue !== pass.children[1].value) {
         pass0.children[2].textContent = 'confirm your password'
         pass0.children[2].classList.add('err')
+        return false
     }
-    else
+    else {
         pass0.children[2].classList.remove('err')
+        return true
+    }
 
 }
 
 // console.log("Register")
 
-window.onload = function(){
-    const submit = document.getElementById('submit');
-    // let message = '';
-    submit.addEventListener('click', this.submitHandler)
-}
+// window.onload = function(){
+//     const submit = document.getElementById('submit');
+//     // let message = '';
+//     submit.addEventListener('click', this.submitHandler)
+// }
 
-function setMessage(message){
+function setMessage(message) {
     document.getElementById('messagetag').textContent = message
     // pass.children[2].textContent = message
     // messageTag.value = message;
@@ -103,25 +118,25 @@ function submitHandler() {
     event.preventDefault();
     // axios.post("http://localhost:5000/register",
     axios.post("https://yourjourneydocumented.herokuapp.com/register",
-    {
-        username: username.value,
-        email: email.value,
-        password: password.value,
-        confirmpassword: confirmpassword.value
-    }
-    )
-    .then(
-        response => {
-            console.log(response.data)
-            setMessage(response.data.message)
+        {
+            username: username.value,
+            email: email.value,
+            password: password.value,
+            confirmpassword: confirmpassword.value
         }
     )
-    .catch(
-        error => {
-            // console.log(response.data)
-            console.log(error.response.data.message)
-            setMessage(error.response.data.message)
-        }
-    )
+        .then(
+            response => {
+                console.log(response.data)
+                setMessage(response.data.message)
+            }
+        )
+        .catch(
+            error => {
+                // console.log(response.data)
+                console.log(error.response.data.message)
+                setMessage(error.response.data.message)
+            }
+        )
     console.log("clicked..")
 }
