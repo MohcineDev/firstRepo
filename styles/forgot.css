@@ -26,6 +26,10 @@ p {
     margin: 0 0 30px;
 }
 
+#messageTag {
+    font-size: 0.5rem;
+}
+
 .Form {
     background-color: #212121;
     padding: 30px 40px;

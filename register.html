@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/register.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js" integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script> -->
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+
+
+    <script src="./js/register.js"></script>
+
     <title>Register</title>
 </head>
 <body>
@@ -13,7 +21,7 @@
         <div class="loginForm">
 
             <p>Register</p>
-            <form action="">
+            <form>
                 <label for="username">Username : </label>
                 <input type="text" name="" id="username"><br>
                 <label for="email">Email : </label>
@@ -21,8 +29,10 @@
                 <label for="password">Password : </label>
                 <input type="password" name="" id="password"><br>
                 <label for="password">Confirm : </label>
-                <input type="password" name="" id="password"><br>
-                <input type="submit" value="Register">
+                <input type="password" name="" id="confirmpassword"><br>
+
+                <p id="messagetag"></p><br>
+                <input id="submit" type="submit" value="Register">
                
                 <a href="login.html">have an account !</a>
 
