@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/register.css">
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
     <script src="register.js" defer></script>
     <title>Register</title>
 </head>
@@ -34,10 +35,11 @@
                 </div>
                 <div class="pass0">
                     <label for="password">Confirm : </label>
-                    <input type="password" name="" id="password">
+                    <input type="password" name="" id="confirmpassword">
                     <p>1</p>
                 </div>
-                <input type="submit" value="SignUp">
+                <p id="messagetag"></p>
+                <input id="submit" type="submit" value="SignUp">
 
                 <a href="login.html">have an account !</a>
 
