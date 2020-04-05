@@ -148,7 +148,6 @@ function submitHandler() {
     console.log("clicked..")
 }
 
-
 //----dark light
 document.body.classList.add(localStorage.getItem('classList'))
 const dark = document.querySelector('#dark')
