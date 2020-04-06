@@ -1,17 +1,15 @@
 * {
+    --linkDark: rgb(16, 128, 197);
     --link: rgb(95, 178, 229);
     --col: #ddd;
+    --dark: #313131
 }
 
 body {
-    background-color: #313131;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--col);
-    margin: 0;
-}
-
-.dark {
     background-color: #dff4f6;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+    margin: 0;
 }
 
 /* ------- Nav Bar------------ */
@@ -19,14 +17,15 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: #212121;
-    height: 40px;
+    background-color: #fff;
+    height: 50px;
     align-items: center;
+    box-shadow: 0 1px 2px var(--dark);
 }
 
 nav a {
     text-decoration: none;
-    color: var(--link);
+    color: var(--linkDark);
     margin: 5px;
     padding: 5px 10px;
 }
@@ -39,15 +38,7 @@ nav svg {
 }
 
 svg path {
-    fill: rgb(255, 249, 217);
-}
-
-svg path {
-    fill: rgb(255, 249, 217);
-}
-
-svg:hover path {
-    fill: var(--link);
+    fill: var(--dark);
 }
 
 .menu {
@@ -90,22 +81,26 @@ p {
     margin: 0 0 30px;
 }
 
-.Form {
-    background-color: #212121;
+.forgotForm {
+    background-color: #fff;
     padding: 30px 20px;
     box-shadow: 0px 0px 8px #555;
     border-radius: 10px;
 }
 
 input[type=email], input[type=submit] {
-    border: 1px solid var(--col);
+    border: 1px solid #6c6c6c;
     border-radius: 5px;
     margin: 10px 0;
     outline: none;
 }
 
+input[type=email]:focus {
+    border: 1px solid rgb(29, 141, 200);
+}
+
 .email {
-    margin: 10px 0;
+    margin: 0;
     position: relative;
 }
 
@@ -137,12 +132,13 @@ input[type=email], input[type=submit] {
     visibility: visible !important;
     color: #fde8c0;
 }
+
 input[type=email] {
     width: 200px;
     padding: 8px 10px;
     font-size: 0.9em;
-    background-color: #313131;
-    color: var(--col);
+    background-color: #fff;
+    color: var(--dark);
 }
 
 input[type=submit] {
@@ -163,9 +159,64 @@ input[type=submit]:hover {
 form a {
     font-size: 14px;
     text-decoration: none;
-    color: var(--link)
+    color: var(--linkDark)
 }
 
 a:hover {
     color: rgb(35, 215, 224);
 }
+
+#messagetag {
+    font-size: 1.2em;
+    margin: 0;
+    color: rgb(253, 117, 144);
+    visibility: hidden;
+}
+
+/* ------------- */
+
+.dark {
+    color: var(--col);
+    background-color: var(--dark);
+}
+
+.dark svg path {
+    fill: rgb(255, 249, 217);
+}
+
+.dark nav {
+    box-shadow: 0 1px 2px #959595;
+    background-color: #212121;
+}
+
+.dark nav a {
+    color: var(--link);
+}
+
+svg:hover path {
+    fill: var(--link);
+}
+
+.dark .forgotForm {
+    background-color: #212121;
+    box-shadow: 0px 0px 8px #959595;
+}
+
+.dark input[type=email], .dark input[type=password], .dark input[type=submit] {
+    border: 1px solid var(--col);
+}
+
+.dark input[type=email], .dark input[type=password] {
+    background-color: var(--dark);
+    color: var(--col);
+}
+
+.dark form a {
+    color: var(--link)
+}
+
+.dark a:hover {
+    color: var(--linkDark);
+}
+
+/* ------------- */

@@ -148,21 +148,21 @@ function submitHandler() {
     console.log("clicked..")
 }
 
-//----dark light
+//----dark / light
 document.body.classList.add(localStorage.getItem('classList'))
 const dark = document.querySelector('#dark')
 
 dark.addEventListener('click', () => {
 
-    if (localStorage.getItem('classList')=='light') {
+    if (localStorage.getItem('classList') == 'light') {
         document.body.classList.add('dark')
         localStorage.setItem('classList', 'dark')
     }
-    else{
+    else {
         document.body.classList.remove('dark')
         localStorage.setItem('classList', 'light')
     }
-    
+
     //or just use this easy but without reload
     // document.body.classList.toggle('dark')
 

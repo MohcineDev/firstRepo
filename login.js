@@ -15,8 +15,12 @@ function inputValidation() {
 
     emailCheck(emailInput)
     passwordCheck(passInput)
+
+    if (emailCheck(emailInput) && passwordCheck(passInput)) {
+        submitHandler()
+    }
 }
- 
+
 //--- email //still
 emailCheck = (inputValue) => {
     if (inputValue === '') {
@@ -64,3 +68,30 @@ dark.addEventListener('click', () => {
     }
 })
 
+function setMessage(msg) {
+    document.getElementById('messagetag').textContent = msg
+    document.getElementById('messagetag').style.visibility = 'visible'
+}
+
+function submitHandler() {
+
+    const email = document.getElementById('email')
+    const password = document.getElementById('password')
+
+    event.preventDefault()
+    axios.post('https://yourjourneydocumented.herokuapp.com/login', {
+        email: email.value,
+        password: password.value
+    })
+        .then(
+            response => {
+                setMessage(response.data.message)
+            }
+        )
+        .catch(
+            error => {
+                setMessage(error.response.data.message)
+            }
+        )
+
+}
