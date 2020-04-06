@@ -27,7 +27,7 @@ nav a {
     text-decoration: none;
     color: var(--linkDark);
     margin: 5px;
-    padding: 5px 10px;
+    padding: 5px 15px;
 }
 
 nav svg {
@@ -59,7 +59,7 @@ svg path {
 
 .extra>a {
     border: 1px solid rgb(56, 93, 109);
-    border-radius: 0 8px 0;
+    border-radius: 4px;
 }
 
 /* ------------------*/
@@ -89,15 +89,21 @@ p {
     border-radius: 10px;
 }
 
-input[type=text], input[type=email], input[type=password], input[type=submit] {
+form a {
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--linkDark)
+}
+
+a:hover {
+    color: var(--link);
+}
+
+#username, #email, input[type=password], input[type=submit] {
     border: 1px solid #6c6c6c;
     border-radius: 5px;
     outline: none;
     margin: 10px 0;
-}
-
-input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
-    border: 1px solid rgb(29, 141, 200);
 }
 
 .username, .email, .pass, .pass0 {
@@ -138,7 +144,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
     color: #fde8c0;
 }
 
-input[type=email], input[type=password], input[type=text] {
+#username, #email, input[type=password] {
     width: 200px;
     padding: 8px 10px;
     font-size: 0.9em;
@@ -158,24 +164,14 @@ input[type=submit] {
     padding: 8px 0px;
     color: #313131;
     font-size: 1.2em;
-    margin: 10px 0;
+    margin: 10px 0 5px;
     background-color: rgb(95, 216, 229);
 }
 
 input[type=submit]:hover {
     background-color: rgb(95, 178, 229);
-    color: #0f0e0e;
+    color: #f0f0f0;
     cursor: pointer;
-}
-
-form a {
-    font-size: 14px;
-    text-decoration: none;
-    color: var(--linkDark)
-}
-
-a:hover {
-    color: rgb(35, 215, 224);
 }
 
 /* ----------- */
@@ -207,11 +203,15 @@ svg:hover path {
     box-shadow: 0px 0px 8px #959595;
 }
 
-.dark input[type=text], .dark input[type=email], .dark input[type=password], .dark input[type=submit] {
+.dark #username, .dark #email, .dark input[type=password], .dark input[type=submit] {
     border: 1px solid var(--col);
 }
 
-.dark input[type=text], .dark input[type=email], .dark input[type=password] {
+#username:focus, #email:focus, input[type=password]:focus {
+    border: 1px solid rgb(29, 141, 200);
+}
+
+.dark #username, .dark #email, .dark input[type=password] {
     background-color: var(--dark);
     color: var(--col);
 }
@@ -221,7 +221,7 @@ svg:hover path {
 }
 
 .dark a:hover {
-    color: var(--linkDark);
+    color: rgb(45, 202, 226);
 }
 
 /* ----------- */

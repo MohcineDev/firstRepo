@@ -89,24 +89,22 @@ p {
     border-radius: 10px;
 }
 
-input[type=email], input[type=password], input[type=submit] {
-    border: 1px solid  #6c6c6c;
+#email, #password, input[type=submit] {
+    border: 1px solid #6c6c6c;
     border-radius: 3px;
     margin: 10px 0;
     outline: none;
 }
 
-input[type=email]:focus, input[type=password]:focus{
-    border: 1px solid  rgb(29, 141, 200);
-}
-  
 .email, .pass {
     position: relative;
     margin: 10px 0;
 }
+
 .pass {
-    margin:  0;
+    margin: 0;
 }
+
 .email p, .pass p {
     font-size: 14px;
     margin: 0;
@@ -136,7 +134,8 @@ input[type=email]:focus, input[type=password]:focus{
     color: #fde8c0;
 }
 
-input[type=email], input[type=password] {
+
+#email, #password {
     width: 200px;
     padding: 8px 10px;
     font-size: 0.9em;
@@ -149,7 +148,7 @@ input[type=submit] {
     padding: 5px 0px;
     color: #313131;
     font-size: 1.5em;
-    margin: 10px 0;
+    margin: 10px 0 5px;
     background-color: rgb(95, 216, 229);
 }
 
@@ -166,7 +165,7 @@ form a {
 }
 
 a:hover {
-    color: rgb(35, 215, 224);
+    color: var(--link);
 }
 
 #messagetag {
@@ -205,11 +204,11 @@ svg:hover path {
     box-shadow: 0px 0px 8px #959595;
 }
 
-.dark input[type=email], .dark input[type=password], .dark input[type=submit] {
+.dark #email,  .dark #password, .dark input[type=submit] {
     border: 1px solid var(--col);
 }
 
-.dark input[type=email], .dark input[type=password] {
+.dark #email,  .dark #password{
     background-color: var(--dark);
     color: var(--col);
 }
@@ -219,6 +218,11 @@ svg:hover path {
 }
 
 .dark a:hover {
-    color:var(--linkDark);
+    color: rgb(45, 202, 226);
 }
+
+#email:focus, #password:focus {
+    border: 1px solid rgb(29, 141, 200);
+}
+
 /* ------------- */
