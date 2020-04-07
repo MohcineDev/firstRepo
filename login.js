@@ -78,18 +78,25 @@ function submitHandler() {
     const email = document.getElementById('email')
     const password = document.getElementById('password')
 
+    // console.log(email, password)
+
     event.preventDefault()
-    axios.post('https://yourjourneydocumented.herokuapp.com/login', {
-        email: email.value,
-        password: password.value
-    })
+    axios.post(
+        'https://yourjourneydocumented.herokuapp.com/login',
+        // 'http://localhost:5000/login',
+        {
+            email: email.value,
+            password: password.value
+        })
         .then(
             response => {
+                // console.log(response)
                 setMessage(response.data.message)
             }
         )
         .catch(
             error => {
+                // console.log("error", error)
                 setMessage(error.response.data.message)
             }
         )
