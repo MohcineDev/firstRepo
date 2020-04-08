@@ -15,13 +15,12 @@ function inputValidation() {
     let emailInput = email.children[1].value
     let passInput = pass.children[1].value
     let pass0Input = pass0.children[1].value
-    usernameCheck(usernameInput)
-    emailCheck(emailInput)
-    passwordCheck(passInput)
-    confirmCheck(pass0Input)
 
-    if (usernameCheck(usernameInput) && emailCheck(emailInput) && passwordCheck(passInput) && confirmCheck(pass0Input)) {
-        submitHandler()
+    if (usernameCheck(usernameInput)
+        && emailCheck(emailInput)
+        && passwordCheck(passInput)
+        && confirmCheck(pass0Input)) {
+            submitHandler()
     }
     // usernameCheck(usernameInput)
 

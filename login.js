@@ -13,9 +13,6 @@ function inputValidation() {
     let emailInput = email.children[1].value
     let passInput = pass.children[1].value
 
-    emailCheck(emailInput)
-    passwordCheck(passInput)
-
     if (emailCheck(emailInput) && passwordCheck(passInput)) {
         submitHandler()
     }
@@ -81,16 +78,15 @@ function submitHandler() {
     // console.log(email, password)
 
     event.preventDefault()
-    axios.post(
-        'https://yourjourneydocumented.herokuapp.com/login',
-        // 'http://localhost:5000/login',
+    axios.post('https://yourjourneydocumented.herokuapp.com/login',
+    // axios.post('http://localhost:5000/login',
         {
             email: email.value,
             password: password.value
         })
         .then(
             response => {
-                // console.log(response)
+                console.log(response.headers)
                 setMessage(response.data.message)
             }
         )
