@@ -1,0 +1,321 @@
+* {
+    --link: rgb(95, 178, 229);
+    --linkDark: rgb(16, 128, 197);
+    --linkDark0: rgb(11, 106, 165);
+    --col: #ddd;
+    --dark: #313131;
+    --bg:rgb(240, 240, 240);
+    --white:#fcfcfc;
+    background-size: cover;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+    background-color: var(--bg);
+    margin: 0;
+    padding-bottom: 50%;
+}
+
+/* ------- Nav Bar------------ */
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    height: 50px;
+    align-items: center;
+    z-index: 2;
+    box-shadow: 0 1px 2px var(--dark);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--linkDark);
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+a:hover {
+    color: var(--linkDark0);
+}
+
+nav svg {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px 0 5px;
+    cursor: pointer;
+}
+
+svg path {
+    fill: var(--dark);
+}
+
+.menu {
+    margin-left: 30px;
+}
+
+.logo {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.extra {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.extra>a {
+    border-bottom: 2px dotted var(--col);
+}
+
+.extra>a:hover {
+    color: var(--linkDark0);
+    border-bottom: 2px dotted var(--linkDark);
+}
+
+/* ------------------*/
+
+/* ------------------*/
+
+.container {
+    margin: 0 auto;
+}
+
+.sub {
+    width: 60%;
+    background-color: var(--white);
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.sub h3 {
+    text-align: center;
+    margin: 0;
+    color: var(--dark);
+}
+
+.sub .writePost {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.sub .writePost div textarea {
+    background-color:var(--bg);
+    padding: 10px;
+    resize: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: none;
+    color: var(--dark);
+}
+
+.sub .action {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sub .action>div svg {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+
+.sub .action>div svg path {
+    fill: #fff;
+}
+
+.sub .action button, .sub .action select, .sub .action>div {
+    background-color: rgb(16, 128, 197);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+}
+
+.sub .action>select {
+    border-radius: 0 8px 8px 0;
+}
+
+.sub .action>div {
+    border-radius: 8px 0 0 8px;
+}
+
+.sub .action button, .sub .action select {
+    text-transform: uppercase;
+}
+
+.sub .action button:hover, .sub .action select:hover, .sub .action>div:hover {
+    background-color: rgb(11, 103, 160);
+}
+
+.post {
+    background-color: var(--white);
+    color: var(--dark);
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.post header {
+    display: grid;
+    grid-template-columns: 40px 1fr repeat(3, 45px);
+    grid-template-rows: 1fr;
+}
+
+.post header .pic {
+    border: 1px dotted gray;
+    width: 38px;
+    height: 38px;
+    background: url('/imgs/job.svg');
+    border-radius: 5px;
+    cursor: pointer;
+    grid-area: 1/1/2/2;
+}
+
+.post header div:nth-child(2) {
+    grid-area: 1/2/2/3;
+    padding-left: 8px;
+}
+
+.post header div p {
+    margin: 0;
+}
+
+.post header div small {
+    color: gray;
+}
+
+.post header .tags {
+    text-align: right;
+    grid-area: 1/3/2/6;
+    line-height: 40px;
+}
+
+.post header .tags a {
+    text-decoration: none;
+    color: gray;
+}
+
+.post header .tags a:hover {
+    text-decoration: none;
+    color: rgb(177, 177, 177);
+    cursor: pointer;
+}
+
+.post .middle {
+    border: 1px solid rgb(219, 219, 219);
+    padding: 10px 50px;
+    margin: 10px;
+}
+
+.post .middle .imgs img {
+    width: 40%;
+    border: 1px solid rgb(51, 80, 68);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.footer div svg {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.footer .like {
+    grid-area: 1/1/2/2;
+}
+
+.footer .comment {
+    grid-area: 1/2/2/3;
+}
+
+.footer .send {
+    grid-area: 1/3/2/4;
+}
+
+
+.footer div svg path {
+    fill:var(--dark);
+}
+
+
+/* ------------- */
+
+/* ------------- */
+
+.dark {
+    color: var(--col);
+    background-color: var(--dark);
+    background-color: #212121;
+}
+
+.dark svg path {
+    fill: rgb(255, 249, 217);
+}
+
+.dark nav {
+    box-shadow: 0 1px 2px #959595;
+    background-color: #313131;
+}
+
+.dark nav a {
+    color: var(--link);
+}
+
+.dark a:hover {
+    color: rgb(45, 202, 226);
+}
+
+svg:hover path {
+    fill: var(--link);
+}
+
+.dark .sub {
+    background-color: #313131;
+}
+
+.dark .sub h3{
+    color: lavender;
+}
+.dark .sub .writePost div textarea {
+    color: lavender;
+    background-color: #212121;
+}
+
+.dark .sub .action>div svg path {
+    fill: rgb(255, 255, 255);
+}
+.dark .post {
+    color: lavender;
+    background-color: #313131;
+}
+.dark .post .middle {
+    border: 1px solid rgb(78, 78, 78);
+}
+ 
+.dark .footer div svg path {
+    fill: rgb(190, 190, 190);
+}
+
+
+.footer div svg:hover path {
+    fill:var(--link);
+}
+
+/* ------------- */
